@@ -1,13 +1,11 @@
 # Big Data Science notes
-This repository contains course notes, cheatsheets, code and other material of some of the modules in Big Data Science by Semantix Brasil.
+This repository contains course notes, cheatsheets, code and other material in Portuguese of some of the modules in Big Data Science by Semantix Brasil.
 
 # Requerimentos
-É necesario ter Python (e pip) e Git instalados na máquina.
-* Como instalar Python no Windows: https://python.org.br/instalacao-windows/
-* Como instalar Python no Mac/Linux:
-* Como usar o Jupyter Notebook:
-* Como instalar pip:
-* Como instalar o Git (Windows): https://dicasdeprogramacao.com.br/como-instalar-o-git-no-windows/
+É necessario ter Python e Git instalados na sua máquina.
+* Como instalar Python no Windows/MacOS/Linux: https://programadorviking.com.br/como-instalar-o-python/
+* Como usar o Jupyter Notebook: https://medium.com/@pedrofullstack/introdu%C3%A7%C3%A3o-ao-jupyter-notebook-para-python-b2cf79cea31d
+* Como instalar o Git no Windows: https://dicasdeprogramacao.com.br/como-instalar-o-git-no-windows/
 
 # Como usar este repositorio
 Para clonar este repositório:
