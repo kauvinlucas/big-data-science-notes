@@ -20,7 +20,7 @@ Para atualizar o repositório clonado pelo Git (deve estar na mesma pasta do rep
 git fetch origin
 ```
 
-Para contribuir con este repositorio no Git (só depois de modificar os arquivos que voçê deseja contribuir)
+Para contribuir con este repositorio no Git (só depois de modificar os arquivos que voçê deseja contribuir, substitua <> pelo valor correspondente)
 ```
 git checkout -b <nome da rama>
 git add <nome ou diretorio do arquivo modificado>
