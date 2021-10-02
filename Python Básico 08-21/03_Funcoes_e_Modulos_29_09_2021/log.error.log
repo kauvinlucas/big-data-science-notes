@@ -1,0 +1,8 @@
+ 
+ERROR 2021-10-01 14:21:04,922 And error has occurred at /divide
+Traceback (most recent call last):
+  File "/tmp/ipykernel_14562/1587134262.py", line 44, in wrapper
+    return func(*args, **kwargs)
+  File "/tmp/ipykernel_14562/2516426464.py", line 3, in divide
+    return num1 / num2
+ZeroDivisionError: division by zero
