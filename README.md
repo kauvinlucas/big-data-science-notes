@@ -18,6 +18,7 @@ python -m pip install -r requirements.txt
 Para atualizar o repositório clonado pelo Git (deve estar no diretório root do repositório clonado):
 ```
 git fetch origin
+python -m pip install -r requirements.txt
 ```
 
 Para contribuir con este repositório no Git uma vez clonado:
@@ -27,7 +28,6 @@ Para contribuir con este repositório no Git uma vez clonado:
 * Crie uma nova rama deste repositório:
 ```
 git checkout -b <nome da rama>
-python -m pip install -r requirements.txt
 ```
 * Modifique os arquivos.
 * Faça o commit e o push da rama que voçê criou:
