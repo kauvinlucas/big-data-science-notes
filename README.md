@@ -27,6 +27,7 @@ Para contribuir con este repositório no Git uma vez clonado:
 * Crie uma nova rama deste repositório:
 ```
 git checkout -b <nome da rama>
+python -m pip install -r requirements.txt
 ```
 * Modifique os arquivos.
 * Faça o commit e o push da rama que voçê criou:
