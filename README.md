@@ -15,15 +15,24 @@ cd big-data-science-notes
 python -m pip install -r requirements.txt
 ```
 
-Para atualizar o repositório clonado pelo Git (deve estar na mesma pasta do repositório clonado):
+Para atualizar o repositório clonado pelo Git (deve estar no diretório root do repositório clonado):
 ```
 git fetch origin
 ```
 
-Para contribuir con este repositorio no Git (só depois de modificar os arquivos que voçê deseja contribuir, substitua <> pelo valor correspondente)
+Para contribuir con este repositório no Git uma vez clonado:
+
+*(substitua <> pelo valor correspondente)*
+
+* Crie uma nova rama deste repositório:
 ```
 git checkout -b <nome da rama>
-git add <nome ou diretorio do arquivo modificado>
-git commit -m '<comentario>'
+```
+* Modifique os arquivos.
+* Faça o commit e o push da rama que voçê criou:
+
+```
+git add *
+git commit -m '<comentario útil>'
 git push origin <nome da rama>
 ```
