@@ -4,6 +4,7 @@ This repository contains course notes, cheatsheets, code and other material in P
 # Requerimentos
 É necessario ter Python e Git instalados na sua máquina.
 * Como instalar Python no Windows/MacOS/Linux: https://programadorviking.com.br/como-instalar-o-python/
+* Como executar o Jupyter Notebook: https://jupyter.readthedocs.io/pt_BR/latest/running.html
 * Como usar o Jupyter Notebook: https://medium.com/@pedrofullstack/introdu%C3%A7%C3%A3o-ao-jupyter-notebook-para-python-b2cf79cea31d
 * Como instalar o Git no Windows: https://dicasdeprogramacao.com.br/como-instalar-o-git-no-windows/
 
