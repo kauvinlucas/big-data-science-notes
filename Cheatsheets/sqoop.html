@@ -1,0 +1,297 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.1.2 (Linux)"/>
+	<meta name="created" content="2021-09-05T00:17:00"/>
+	<meta name="changed" content="2021-09-05T21:22:05"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { color: #000000; line-height: 115%; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr; background: transparent }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+		a:link { color: #000080; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 18pt"><b>Sqoop cheatsheet</b></font></font></p>
+<br/>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 14pt"><b>Main
+commands:</b></font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Verify
+version:</b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+sqoop version</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>See
+commands:</b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+sqoop help</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop help &lt;command&gt;</font></p>
+<p class="western" style="line-height: 100%; margin-bottom: 0in"><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>List
+databases:</b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+ sqoop list-databases --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt;</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>List
+tables: </b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+list-tables --connect jdbc:&lt;database
+engine&gt;://&lt;location&gt;/&lt;database name&gt; --username
+&lt;username&gt; --password &lt;password&gt;</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Query
+table:</b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+sqoop eval --connect jdbc:&lt;database engine&gt;://&lt;location&gt;/&lt;database
+name&gt; --username &lt;username&gt; --password &lt;password&gt;
+--query “&lt;query&gt;”</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Import
+table: </b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+import --table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+by default, sqoop generates a txt file upon import (fields separated
+by comma and lines separated by line break)</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt; --columns
+“&lt;column 1&gt;, &lt;column 2&gt;, ...”</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt; --where
+“&lt;column name&gt;=’&lt;value&gt;’”</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt; --target-dir
+&lt;directory&gt; </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+import to a specific target</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt;
+--warehouse-dir &lt;directory&gt; </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+import to a warehouse base directory</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt;
+--&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+-delete-target-dir </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+import and replace target directory</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt;
+--&lt;target-dir/warehouse-dir&gt; &lt;directory&gt; -append </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+import and append to target directory</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop import --table
+&lt;table name&gt; --connect jdbc:&lt;database engine&gt;://database
+--username &lt;username&gt; --password &lt;password&gt;
+--&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+--lines-terminated-by ‘&lt;delimiter&gt;’ fields-terminated-by
+‘&lt;delimiter&gt;’ </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+define delimiters</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Change
+number of mappers: </b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+import </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+</font><font color="#c9211e"><font face="HelveticaNeueLT Pro 55 Roman, serif">-&lt;m/num-mappers&gt;
+2</font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+only when there’s a primary key in the table, else -m 1,
+-auto-reset-to-mapper or --split-by &lt;column index&gt; (null values
+will be ignored if present)</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Null
+values treatment:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+ sqoop import </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+</font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--null-non-string
+‘&lt;value&gt;’ </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+replace non-string null values with a certain value</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+import </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+</font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--null-string
+‘&lt;value&gt;’ </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+replace string null values with a certain value</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+import </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+</font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--null-non-string
+‘\\N’ --null-string ‘\\N’ </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+Sqoop imports null values as string null. Hive and Impala can read
+null values as \N or \\N</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Save
+as other formats: </b></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">--as
+texfile</font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><span lang="pt-BR">--as-parquetfile</span></font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><span lang="pt-BR">--as-avrodatafile</span></font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><span lang="pt-BR">--as-sequencefile</span></font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Incorporate
+compression:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+ --compress –compression-codec &lt;codec name&gt; </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+example of names: Gzip, Bzip2, Snappy, deflate, Iz4, etc.</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--compress
+–compression-codec org.apache.hadoop.io.compress.&lt;codec name&gt;
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+example of names: GzipCodec, Bzip2Codec, SnappyCodec, etc.</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">cat
+/etc/hadoop/conf/core-site.xml </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+supported codecs list by hadoop</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Jobs:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+sqoop </font></font><font color="#ff0000"><font face="HelveticaNeueLT Pro 55 Roman, serif">job
+-create &lt;job name&gt; </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+--m 1 </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+create a new job</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop job --list </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+list jobs</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop job --show
+&lt;job name&gt; </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+see details of a job</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop job --delete
+&lt;job name&gt; </font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+delete a job</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Incremental
+import:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+sqoop </font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+--m 1 </font><font color="#ff0000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--incremental
+append --check-column &lt;key column&gt; --last-value &lt;column
+value&gt;</font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+</font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+incremental write with append</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+</font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">import
+--table &lt;table name&gt; --connect jdbc:&lt;database
+engine&gt;://database --username &lt;username&gt; --password
+&lt;password&gt; --&lt;target-dir/warehouse-dir&gt; &lt;directory&gt;
+--m 1 </font><font color="#ff0000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--incremental
+lastmodified merge-key &lt;key column&gt; --check-column &lt;column&gt;
+--last-value &lt;date value&gt;</font></font><font face="HelveticaNeueLT Pro 55 Roman, serif">
+</font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+incremental write with lastmodified</font></font>
+<br><br/></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+About incremental import (from </font></font><a href="https://community.cloudera.com/t5/Support-Questions/Is-it-possible-to-do-an-incremental-import-using-Sqoop/m-p/123786#M86530"><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><u>cloudera
+community forum</u></font></font></a><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">:</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">Sqoop
+supports two types of incremental imports: append and lastmodified.
+You can use the --incremental argument to specify the type of
+incremental import to perform.</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+
+
+
+</p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">You
+should specify append mode when importing a table where new rows are
+continually being added with increasing row id values. You specify
+the column containing the row’s id with --check-column. Sqoop
+imports rows where the check column has a value greater than the one
+specified with --last-value.</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+</p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">An
+alternate table update strategy supported by Sqoop is called
+lastmodified mode. You should use this when rows of the source table
+may be updated, and each such update will set the value of a
+last-modified column to the current timestamp. Rows where the check
+column holds a timestamp more recent than the timestamp specified
+with --last-value are imported.</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+</p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">At
+the end of an incremental import, the value which should be specified
+as --last-value for a subsequent import is printed to the screen.
+When running a subsequent import, you should specify --last-value in
+this way to ensure you import only the new or updated data. This is
+handled automatically by creating an incremental import as a saved
+job, which is the preferred mechanism for performing a recurring
+incremental import. See the section on saved jobs later in this
+document for more information.</font></font></p>
+<br/>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Force
+map column:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+--map-column-java id=String,value=Integer</font></font><font color="#ff0000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+map to java</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--map-column-hive
+id=String,value=Integer</font></font><font color="#ff0000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+map to hive</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>Import
+to Hive:</b></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">
+--hive-import </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+map to java</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--hive-overwrite
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+Overwrite data if exists</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--create-hive-table
+</font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+Necessary if table doesn’t exist. Will fail if table exists</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif">--hive-table
+&lt;db_name&gt;.&lt;table_name&gt; </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">#
+Specify table name</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">Example:</font></font></p>
+<p class="western" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif">sqoop
+import –table employees --connect jdbc:mysql://database/employees
+--username user --password secret
+–warehouse-dir=/user/hive/warehouse/test.db </font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><b>--hive-import
+--create-hive-table --hive-table test.user</b></font></font></p>
+
+
+	</p>
+</div>
+</body>
+</html>

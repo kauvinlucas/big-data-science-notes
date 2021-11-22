@@ -1,0 +1,864 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-22T13:29:37.018045278"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<meta name="created" content="00:00:00">
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { color: #000000; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; background: transparent; direction: ltr }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell, serif"><font size="4" style="font-size: 18pt; color: #1B0122"><b>Spark
+Cheatsheet</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>Spark
+data types (spark sql)</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Numeric
+type</b></font></font></font></p>
+<ul>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">ByteType:
+	Representa 1-byte de números inteiros assinados. O intervalo dos
+	números varia de -128 a 127.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">ShortType:
+	Representa 2-byte números inteiros assinados. O intervalo dos
+	números varia de -32768 a 32767.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">IntegerType:
+	Representa 4-byte números inteiros assinados. O intervalo dos
+	números varia de -2147483648 a 2147483647.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">LongType:
+	Representa 8-byte números inteiros assinados. O intervalo dos
+	números varia de -9223372036854775808 a 9223372036854775807.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">FloatType:
+	Representa números 4-byte de ponto flutuante de precisão simples.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">DoubleType:
+	Representa números 8-byte de ponto flutuante de precisão simples.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">DecimalType:
+	Representa números decimais assinados de precisão arbitraria. Um
+	BigDecimal (java.math.BigDecimal), na qual DecimalType está
+	baseado, consiste em um número de precisão arbitraria sem escala e
+	em um número inteiro de scala 32-bit.</font></font></p>
+</ul>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>String
+type</b></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">StringType:
+Representa valores de texto.</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Binary
+type</b></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">BinaryType:
+Representa valores binarios.</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Boolean
+type</b></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">BooleanType:
+Representa valores booleanos.</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Datetime
+type</b></font></font></font></p>
+<ul>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">TimestampType:
+	Representa valores que comprendem campos de ano, mes, dia, hora,
+	minuto e segundo.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">DateType:
+	Representa valores que comprendem campos de ano, mes e dia.</font></font></p>
+</ul>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Complex
+types</b></font></font></font></p>
+<ul>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">ArrayType(elementType,
+	containsNull): Represents values comprising a sequence of elements
+	with the type of elementType. containsNull is used to indicate if
+	elements in a ArrayType value can have null values.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">MapType(keyType,
+	valueType, valueContainsNull): Represents values comprising a set of
+	key-value pairs. The data type of keys are described by keyType and
+	the data type of values are described by valueType. For a MapType
+	value, keys are not allowed to have null values. valueContainsNull
+	is used to indicate if values of a MapType value can have null
+	values.</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">StructType(fields):
+	Represents values with the structure described by a sequence of
+	StructFields (fields).</font></font></p>
+	<li><p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+	<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">StructField(name,
+	dataType, nullable): Represents a field in a StructType. The name of
+	a field is indicated by name. The data type of a field is indicated
+	by dataType. nullable is used to indicate if values of this fields
+	can have null values.</font></font></p>
+</ul>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Import
+types in Python</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>:</b></font></font></font>
+</p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">from
+pyspark.sql.types import *</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<a href="spark1.html"><font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Types
+equivalents in Python</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>:</b></span></font></font></font><font color="#000000">
+</font></a>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<table width="665" cellpadding="8" cellspacing="0">
+	<col width="103"/>
+
+	<col width="294"/>
+
+	<col width="220"/>
+
+	<tr>
+		<th width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>Data type</b></p>
+		</th>
+		<th width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>Value type in Python</b></p>
+		</th>
+		<th width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>API to access or create a data type</b></p>
+		</th>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>ByteType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			int or long<br/>
+<b>Note: </b>Numbers will be converted to 1-byte
+			signed integer numbers at runtime. Please make sure that numbers
+			are within the range of -128 to 127.</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			ByteType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>ShortType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			int or long<br/>
+<b>Note: </b>Numbers will be converted to 2-byte
+			signed integer numbers at runtime. Please make sure that numbers
+			are within the range of -32768 to 32767.</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			ShortType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>IntegerType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			int or long</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			IntegerType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>LongType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			long<br/>
+<b>Note: </b>Numbers will be converted to 8-byte signed
+			integer numbers at runtime. Please make sure that numbers are
+			within the range of -9223372036854775808 to 9223372036854775807.
+			Otherwise, please convert data to decimal.Decimal and use
+			DecimalType.</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			LongType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>FloatType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			float<br/>
+<b>Note: </b>Numbers will be converted to 4-byte
+			single-precision floating point numbers at runtime.</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			FloatType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>DoubleType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			float</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			DoubleType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>DecimalType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			decimal.Decimal</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			DecimalType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>StringType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			string</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			StringType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>BinaryType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			bytearray</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			BinaryType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>BooleanType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			bool</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			BooleanType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>TimestampType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			datetime.datetime</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			TimestampType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>DateType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			datetime.date</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			DateType()</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>ArrayType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			list, tuple, or array</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			ArrayType(<i>elementType</i>, [<i>containsNull</i>])<br/>
+<b>Note:
+			</b>The default value of <i>containsNull </i>is <i>True</i>.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>MapType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			dict</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			MapType(<i>keyType</i>, <i>valueType</i>,
+			[<i>valueContainsNull</i>])<br/>
+<b>Note: </b>The default value of
+			<i>valueContainsNull</i>&nbsp;is&nbsp;<i>True</i>.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>StructType</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			list or tuple</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			StructType(<i>fields</i>)<br/>
+<b>Note:</b><i>fields</i>is a Seq
+			of StructFields. Also, two fields with the same name are not
+			allowed.</p>
+		</td>
+	</tr>
+	<tr>
+		<td width="103" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			<b>StructField</b></p>
+		</td>
+		<td width="294" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			The value type in Python of the data type of this field (For
+			example, Int for a StructField with the data type IntegerType)</p>
+		</td>
+		<td width="220" bgcolor="#C4D9E8" style="background: #C4D9E8; border-top: 1px solid #535a5e; border-bottom: none; border-left: none; border-right: none; padding-top: 0.08in; padding-bottom: 0in; padding-left: 0in; padding-right: 0in"><p class="western" align="left" style="orphans: 0; widows: 0">
+			StructField(<i>name</i>,<i>dataType</i>, [<i>nullable</i>])<br/>
+<b>Note:
+			</b>The default value of&nbsp;<i>nullable </i>is <i>True</i>.</p>
+		</td>
+	</tr>
+</table>
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>Main
+commands from shell (Scala):</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Define
+variable</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>:</b></font></font></font>
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">val
+&lt;variable&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Invoke
+method</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>:</b></span></font></font></font><font color="#000000">
+</font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;variable&gt;.&lt;method&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Read
+file</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><b>:</b></font></font>
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US">spark.read.csv(“&lt;file
+path&gt;”)</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.textFile(“&lt;file
+path&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.jdbc(&lt;jdbc
+url&gt;, “&lt;table path&gt;”, &lt;connectionProperties&gt;)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.parquet(“&lt;file
+path&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US">spark.read.table(“&lt;hive
+table name&gt;”) </span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US">#
+Hive Metastore must be configured first</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.json(“&lt;file
+path&gt;”) </font></font>
+</p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.orc(“&lt;file
+path&gt;”)</font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt">#
+files can be read in several forms:</font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.load(“directory/”)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+load all the files in the directory </span></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.load(“directory/*.log”)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+any file with extension .log</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.load(“file1.parquet,
+file2.parquet, …”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+read specific files</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.load(“directory/fil*”)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+search file that begins with</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt">#
+read format and load:</font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.format(“&lt;file
+format&gt;”).load(“&lt;file path&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+load all the files in the directory </span></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Actions
+(methods)</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><b>:</b></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">printSchema()
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+see data structure</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">count()
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+count number of lines in dataframe</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">first()
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return first line</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">take(n)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return first n lines as array (default is 20)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show(n)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return first n lines (default is 20)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show(false)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return everything and do not truncate data</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">distinct()
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return distinct entries</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">collect()
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+return all of the nodes info (memory intensive, it can give error)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.save(“&lt;output
+path&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+write dataframe to parquet (default)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.json(“&lt;output
+path&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+write dataframe to json</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.csv(“&lt;output
+path&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+write dataframe to csv</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.saveAsTable(“&lt;hive
+table name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Hive location: /user/hive/warehouse/</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.mode(“append”)
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Saving mode</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">write.option(“path”,
+“&lt;path&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Custom options </span></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Transformation</b></span></font></font></font><font color="#3465a4">
+</font><font color="#3465a4"><font face="Cantarell, serif"><b>methods:
+</b></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">select(“&lt;column
+1&gt;”, “&lt;column 2&gt;”, ...)</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">where(“&lt;conditional
+expression&gt;”)</font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">orderBy(“&lt;column
+name&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">orderBy($“&lt;column
+name&gt;”.desc) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Order by descending</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">groupBy(“&lt;by
+column&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Must include one aggregation method: count, avg, sum, min, max,
+first, last, countDistinct, approx_count_distinct, stddev,
+var_sample, var_pop, covar_samp, covar_pop, corr.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">join(&lt;dataframe
+name&gt;, “&lt;column&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Inner join</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">join(&lt;dataframe
+name&gt;, &lt;left dataframe&gt;(“&lt;column&gt;”) ===
+&lt;dataframe&gt;(“&lt;column&gt;”), “left outer”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Left outer join</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">limit(n)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Infer
+schema for semi-structured data</b></span></font></font></font><font color="#3465a4"><font face="Cantarell, serif"><b>:
+</b></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.option(“inferSchema”,”true”)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Import
+csv with header: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.option(“header”,”true”)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Query
+with sql and return dataframe: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.sql(“SELECT
+&lt;value&gt; FROM &lt;table name from default db&gt;”)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.sql(“SELECT
+&lt;value&gt; FROM &lt;format action method&gt;.`/&lt;db name&gt;/&lt;file
+name with extension&gt;`”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Use other database before importing</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.sql(“SELECT
+&lt;value&gt; FROM &lt;db name&gt;.&lt;table name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Simpler query</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt">#
+Example with subquery:</font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt">val
+maAgeDF = spark.sql(“SELECT MEAN(Age) AS mean_age, STDDEV(Age) AS
+sdev_age FROM people WHERE pcode IN (SELECT pcode FROM pcodes WHERE
+state=’MA’)”)</font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+temporary views: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.&lt;action&gt;(“&lt;file
+path&gt;”).createTempView(“&lt;view name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Regular view, which will persist in one Spark session</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.read.&lt;action&gt;(“&lt;file
+path&gt;”).createGlobalTempView(“&lt;view name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Global view, which will persist between multiple Spark sessions until
+Spark shell is terminated</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.&lt;action&gt;(“&lt;file
+path&gt;”).createOrReplaceTempView(“&lt;view name&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Query
+temporary views: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.sql(“SELECT
+&lt;value&gt; FROM &lt;view name&gt;”)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Manage
+views with API Catalog: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.catalog.listDatabases
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+List databases, if database is not listed: Spark config problems or
+missing package.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.catalog.setCurrentDatabase(“&lt;database
+name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Set default database to be read</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.catalog.listTables
+</span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+List all table and view in database</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.catalog.listColumns(“&lt;table
+name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+List all columns in a table or view</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.catalog.dropTempView(“&lt;view
+name&gt;”) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Drop temporary views created in Spark</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>P</b></span></font></font></font><font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>ySpark:</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Basic
+code to create spark session in Python: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark
+= SparkSession.builder.appname(“Python”).getOrCreate()</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Log4j
+logging levels: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">TRACE,
+DEBUG, INFO (default), WARN, ERROR, FATAL, OFF.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Set
+logging level: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">spark.sparkContext.setLogLevel(“INFO”)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>PySpark
+RDD:</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Read
+text file: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">rdd
+= sc.textFile(“&lt;directory path&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Save
+text file: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">rdd.saveAsTextFile(“&lt;directory
+path&gt;”)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Count
+rows: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.count()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+first row: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.first()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+first n rows: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.take(&lt;n&gt;)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+all rows without array (can overwhelm memory): </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.foreach(println)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Map
+rows to an array of one dimension: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.flatMap(lambda
+&lt;variable&gt;: &lt;function or condition&gt;)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Map
+rows to an array of same dimensions: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.map(lambda
+&lt;variable&gt;: &lt;function or condition&gt;)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Filter
+rows: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.filter(lambda
+&lt;variable&gt;: &lt;function or condition&gt;)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<a href="spark2.html"><font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Apply
+reduce: </b></span></font></font></font><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rdd.reduceByKey(lambda
+&lt;key 1&gt;, &lt;key 2&gt;: &lt;operation&gt;) </span></span></font></font></font><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+</span></span></font></font></font><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">Merge
+the values for each key using an associative and commutative reduce
+function.</span></span></span></span></font></font></font></span></a></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><b>Get
+number of partitions: </b></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">rdd.getNumPartitions()</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><b>Set
+number of partitions: </b></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">rdd.repartition(&lt;number
+of partitions&gt;)</span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Reshuffle the data in the RDD randomly to create either more or fewer
+partitions and balance it across them. This always shuffles all data
+over the network.</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><b>Change
+number of partitions with reduceByKey: </b></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">rdd.reduceByKey(lambda
+&lt;key 1&gt;, &lt;key 2&gt;: &lt;operation&gt;, “&lt;number of
+partitions&gt;”)</span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><span style="letter-spacing: normal">
+</span></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Reshuffle the data in the RDD randomly to create either more or fewer
+partitions and balance it across them. This always shuffles all data
+over the network.</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell, serif"><font size="4" style="font-size: 14pt"><b>PySpark
+Dataframe: </b></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Create
+and import with schema: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">columns
+= [StructField(“&lt;column name&gt;”, &lt;type&gt;), …]</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">schema
+= StructType(columns)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df
+= spark.read.csv(“&lt;path&gt;”, schema= schema)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Create
+dataframe with schema: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">from
+pyspark.sql import Row</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">columns
+= [StructField(“&lt;column name&gt;”, &lt;type&gt;), …]</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">schema
+= StructType(columns)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">data
+= [Row(“&lt;value 1&gt;”, …), …]</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df
+= spark.createDataFrame(data = data, schema = schema)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Create
+schema with Row class: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">from
+pyspark.sql import Row</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">schema
+= Row(“&lt;column 1&gt;”, …)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">data
+= [schema(“&lt;value 1&gt;”, …), …]</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df
+= spark.createDataFrame(data = data)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Print
+schema: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.printSchema()</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Read
+csv options examples: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.option(“sep”,
+“,”).option(“header”, “true”).option(“quote”,
+“\’”).options(“mode”, “DROPMALFORMED”).csv(“&lt;path&gt;”)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">spark.read.csv(“&lt;path&gt;”,
+mode=”overwrite”, header=”false”, sep=”\t”, quote=”\’”)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Add
+new column: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;new
+column name&gt;”, “&lt;column or function&gt;”)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Replace
+existing column: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, “&lt;column or function&gt;”)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>How
+to access columns: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">col(“&lt;name&gt;”)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">dataframe(“&lt;name&gt;)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">dataframe.&lt;name&gt;</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Convert
+column to timestamp with withColumn: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">from
+pyspark.sql.functions import unix_timestamp, from_unixtime</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">df.withColumn(“&lt;column
+name&gt;”, from_unixtime(unix_timestamp(col(“&lt;name&gt;”),
+“&lt;old datetime format&gt;”), “&lt;new datetime format&gt;”))
+</span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Datetime format examples: yyyy/MM/dd, MM-dd-yyyy</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Substring
+with withColumn: </b></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">df.withColumn(“&lt;column
+name&gt;”, substring(“&lt;column&gt;”, &lt;int initial
+position&gt;, &lt;int length&gt;)) </span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Index starts with 1</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Concat
+values from columns: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, concat(&lt;column or function&gt;, &lt;column or
+function&gt;, …)</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Split
+values from columns: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;colum
+name&gt;”, split(&lt;column&gt;, “&lt;delimiter&gt;”))</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">df.withColumn(“&lt;column
+name&gt;”, col(“&lt;splitted column
+name&gt;”).getItem(&lt;number&gt;)).drop(“&lt;splitted column
+name&gt;”) </span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Retrieve first item in the splitted column, create new column and
+drop old column after. GetItem index starts with 1</span></span></span></span></font></font></font></span></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Change
+column data type: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, col(“&lt;name&gt;”).cast(&lt;type&gt;))</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, df.&lt;column name&gt;.cast(&lt;type&gt;))</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Change
+number of decimals in float: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, format_number(col(“&lt;name&gt;”), &lt;int number of
+decimals&gt;))</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Replace
+with regex: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, regexp_replace(col(“&lt;name&gt;”), “&lt;current
+pattern&gt;”, “&lt;new pattern&gt;”))</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt">#
+Example replace period by a comma: df.withColumn(“name”,
+regexp_replace(col(“name”), “\.”, “,”))</font></font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Replace
+column with value when condition meets: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.withColumn(“&lt;column
+name&gt;”, when(&lt;condition&gt;, &lt;value or function if
+true&gt;).otherwise(&lt;value or function when false&gt;) )</font></font></p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><b>Agregation
+in groupBy: </b></font></font></font>
+</p>
+<p class="western" align="left" style="font-variant: normal; letter-spacing: normal; font-style: normal; font-weight: normal; line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell, serif"><font size="3" style="font-size: 12pt">df.groupBy(“&lt;column
+name&gt;”).agg(&lt;aggregation function&gt;)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<span style="font-variant: normal"><font color="#000000"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">df.groupBy(“&lt;column
+name&gt;”).agg(&lt;aggregation function&gt;, &lt;aggregation
+function&gt;.alias(“new column name”)) </span></span></span></span></font></font></font></span><span style="font-variant: normal"><font color="#127622"><font face="Cantarell, serif"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span lang="en-US"><span style="font-style: normal"><span style="font-weight: normal">#
+Several aggregation functions with aliasing</span></span></span></span></font></font></font></span></p>
+</body>
+</html>
