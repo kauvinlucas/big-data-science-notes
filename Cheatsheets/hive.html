@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.1.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-09-10T18:19:51"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { color: #000000; line-height: 115%; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr; background: transparent }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>Hive cheatsheet</b></span></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 14pt"><b>
+</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 14pt"><span lang="en-US"><b></b></span></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="4" style="font-size: 14pt"><b> </b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+databases</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show
+database;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-bottom: 0in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Database
+structure</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+ </span></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">desc
+database &lt;name&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>List
+</b></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>tables</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show
+tables;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+table structure:</b></span></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">desc
+&lt;table name&gt;; </span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Table
+constants and types</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">desc
+formatted &lt;table name&gt;; </span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#See
+partitions and other info</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">desc
+extended &lt;table name&gt;;</span></span></font></font></font><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#</span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">Same
+as desc formatted, but with summarized info</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+database:</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+database &lt;name&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+database &lt;name&gt; location &lt;path&gt;; </span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Store
+on a different path than default (/user/hive/warehouse/)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+database &lt;name&gt; comment &lt;description&gt;;</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#</span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">Add
+comment (recommended)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+table</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+table &lt;name&gt; (&lt;column 1&gt; &lt;data type 1&gt;, </span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;column
+2&gt; &lt;data type 2&gt;, …); </span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Add
+internal table (columns + metadata)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+external table &lt;name&gt;  (&lt;column 1&gt; &lt;data type 1&gt;, 
+&lt;column 2&gt; &lt;data type 2&gt;, …) location &lt;path&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Drop
+internal/external table</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">drop
+table; </span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+when dropping external table, only metadata is deleted. Table is
+still in hdfs.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Examples
+of simple data types:</b></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">INT,
+SMALLINT, TINYINT, BIGINT, FLOAT, DOUBLE, STRING, VARCHAR, CHAR.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Examples
+of complex data types:</b></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ARRAY</span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(element list), </span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">MAP</span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(key/value), </span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">STRUCT</span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(more than one data type in a single item), </span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">UNION</span></span></font></font></font><font color="#127622"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(not currently supported by Impala and Cloudera)</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Define
+delimiters (csv files, optional)</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">row
+format delimited fie</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">lds
+terminated by ‘&lt;delimiter&gt;’;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">row
+format delimited lines</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+terminated by ‘&lt;delimiter&gt;’;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Skip
+first rows</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">tblproperties(“skip.header.line.count”=”&lt;number
+of line&gt;”);</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Define
+location for external tables</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">location</span></span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+&lt;directory&gt;;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Example
+of table creation: </b></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">create
+external table user(</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">	id
+int,</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">	name
+String,</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">	age
+int</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">)</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">row
+format delimited</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">fields
+terminated by ‘\t’</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">lines
+terminated by ‘\n’</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">stored
+as textfile</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; orphans: 0; widows: 0; margin-left: 0.38in; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#395511"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">location
+‘/user/cloudera/data/client’;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Insert
+data</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">insert
+into table &lt;name&gt; partition(&lt;partition name&gt;=’&lt;value&gt;’)
+values (&lt;field&gt;, &lt;value&gt;, …);</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">insert
+into &lt;name&gt; select &lt;columns&gt; from &lt;table&gt; where
+&lt;condition&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Insert
+data from directory</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">hive
+load data inpath ‘&lt;directory&gt;’ into table &lt;table name&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">hive
+load data inpath ‘&lt;directory&gt;’ overwrite into table &lt;table
+name&gt; partition(&lt;partition name&gt;);</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Select
+statement arguments</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:
+</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">select
+* from &lt;table&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;where
+…&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;group
+by...&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;having...&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;order
+by …&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;limit
+n&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Joins</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+ </span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ANSI
+joins (inner join, left outer right outer, full outer)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+view</b></span></font></font></font><font color="#3465a4"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><b>:</b></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+</span></font></font></font><font color="#000000"><font face="HelveticaNeueLT Pro 55 Roman, serif"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">create
+view &lt;view name&gt; as select &lt;column&gt; from &lt;table name&gt;;</span></span></font></font></font></p>
+<p class="western" align="left" style="font-weight: normal; line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</body>
+</html>
