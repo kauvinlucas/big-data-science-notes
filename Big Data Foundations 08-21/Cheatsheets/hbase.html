@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-23T18:48:43.749393981"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { color: #000000; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font size="4" style="font-size: 14pt"><b>Hbase
+</b></font><font size="4" style="font-size: 14pt"><b>cheatsheet</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Start Hbase shell:</b></font>
+hbase shell</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Status:</b></font>
+status</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Hbase version:
+</b></font>version</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Table commands help:
+</b></font>table_help</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Info about user:
+</b></font>whoami</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>See help: </b></font>help
+&lt;command&gt;</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><b>Create table: </b></font>create
+‘&lt;table name&gt;’, {NAME=&gt;’&lt;family name&gt;’},
+{NAME=&gt;’&lt;family name&gt;’},  …</font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell">create ‘&lt;table name&gt;’, ‘&lt;family&gt;’,
+‘&lt;family&gt;’, … <font color="#127622"># by default, sqoop
+generates a txt file upon import (fields separated by comma and lines
+separated by line break)</font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+tables</b></span></font></font><font color="#3465a4"><b>:</b></font><font color="#3465a4"><span style="font-weight: normal">
+</span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">list</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Describe
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">describe
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Delete
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">drop
+‘&lt;table name&gt;’ #table must be disabled</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">drop_all
+&lt;expression&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+for example: drop_all ‘r.*’ (drop all tables starting with ‘r’)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Table
+verification:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">exists
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">is_disabled
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">is_enable
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Disable
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">disable
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">disable_all
+‘&lt;expression&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">truncate
+‘&lt;table name&gt;’ </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+will first disable table and then create a new table in place</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Enable
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">enable
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Insert
+data:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">put
+‘&lt;table name&gt;’,‘&lt;key name&gt;’,’&lt;family
+name&gt;:&lt;column name&gt;’,’&lt;value&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+to alter data, the same command must be issued with the same key a
+with a different value</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Enable
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">enable
+‘&lt;table name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Select
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">get
+‘&lt;table name&gt;’,’&lt;key name&gt;’ </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#get
+all entries by key</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">get
+‘&lt;table name&gt;’,’&lt;key name&gt;’,’{COLUMNS=&gt;[‘&lt;family
+name 1&gt;’,‘&lt;family name 2&gt;’,...]}’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">get
+‘&lt;table name&gt;’,’&lt;key name&gt;’,’{COLUMNS=&gt;[‘&lt;family
+name&gt;:&lt;column name&gt;’,‘&lt;family name&gt;:&lt;column&gt;’,…]}’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’ </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+select all of the rows of a table</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’, {COLUMNS=&gt;[‘&lt;family name&gt;’]}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’, {COLUMNS=&gt;[‘&lt;family name&gt;:&lt;column
+name&gt;’]}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’,{COLUMNS=&gt;[‘&lt;family name&gt;’],
+VERSIONS=&gt;&lt;number&gt;}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">scan
+‘&lt;table name&gt;’,{STARTROW=&gt;’&lt;value&gt;’,
+COLUMNS=&gt;[‘&lt;family name&gt;’]} </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+select all the rows in a table which key starts with a value</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Delete
+entries in table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">delete
+‘&lt;table name&gt;’,’&lt;key name&gt;’,’&lt;family
+name&gt;:&lt;column name&gt;’</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">delete
+‘&lt;table name&gt;’,’&lt;key name&gt;’,’&lt;family name&gt;’
+</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+delete of entries in the family</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">deleteall
+‘&lt;table name&gt;’,’&lt;key name&gt;’ </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+delete of entries in a key</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Alter
+table schema:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">alter
+‘&lt;table name&gt;’,{NAME=&gt;’&lt;family name&gt;’,
+VERSIONS=&gt;&lt;version number&gt;} </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+alter number of versions</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">alter
+‘&lt;table name&gt;’,’delete’=&gt;’&lt;family name&gt;’ </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+delete a family</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Count
+table:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">count
+‘&lt;table name&gt;’  </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+count keys in a table</span></span></font></font></font></p>
+</body>
+</html>

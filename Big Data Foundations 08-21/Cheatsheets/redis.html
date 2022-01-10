@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-23T18:50:49.251466689"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { color: #000000; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>Redis
+</b></span></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>cheatsheet</b></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="2" style="font-size: 11pt"><span lang="en-US"><b>Strings</b></span></font></font><font size="2" style="font-size: 11pt"><b>:</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Set
+string value:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>
+</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">SET
+&lt;key&gt; &lt;value&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">SET
+&lt;key&gt; &lt;value&gt; XX </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Replace existing value if exists (default option)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">SET
+&lt;key&gt; &lt;value&gt; NX </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Will fail if value exists</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">MSET
+&lt;key1&gt; &lt;value&gt; &lt;key2&gt; &lt;value&gt; &lt;key3&gt;
+&lt;value&gt; ... </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Set value to several keys</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Get
+string value: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">GET
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Returns (nil) if does not exists</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">MGET
+&lt;key1&gt; &lt;key2&gt;</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>
+</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">&lt;key3&gt;
+... </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Retrieve value from several keys</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Get
+string length: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">strlen
+&lt;key&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>If
+a string is a number: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">decr
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Decrement value by 1</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">incr
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Increment value by 1</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">decrby
+&lt;key&gt; &lt;increment&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Decrement value by a number</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">incrby
+&lt;key&gt; &lt;decrement&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Increment value by a number</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="2" style="font-size: 11pt"><span lang="en-US"><b>Key
+options</b></span></font></font><font size="2" style="font-size: 11pt"><b>:</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Verify
+if key exists: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">exists
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Returns 0 if false, 1 if true</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Delete
+existing key: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">del
+&lt;key&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Get
+key type: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">type
+&lt;key&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Define
+key expiration: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">expire
+&lt;key&gt; &lt;seconds&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Only works if key exists</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">pexpire
+&lt;key&gt; &lt;miliseconds&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">set
+&lt;key&gt; &lt;value&gt; &lt;seconds&gt; ex </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Creates a key and set expiration</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">set
+&lt;key&gt; &lt;value&gt; &lt;miliseconds&gt; px</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Verify
+key expiration: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ttl
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Returns time remaining in seconds, non existing key with return value
+of -2</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">pttl
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Returns time in miliseconds</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Revoke
+key expiration: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">persist
+&lt;key&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Must return -1 when using ttl</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Basic
+configurations: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">config
+get &lt;config parameter&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Get value of a configuration parameter</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">config
+get * </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Get all configurations</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">config
+set</span></span></font></font></font></p>
+</body>
+</html>

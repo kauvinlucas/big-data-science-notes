@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-23T18:49:46.139696959"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { margin: 0.79in }
+		p { color: #000000; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>ElasticSearch
+</b></span></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>CRUD
+operations:</b></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>HEAD:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>
+</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">curl
+-XHEAD -v http://localhost:&lt;port to kibana&gt;/&lt;index&gt;/_doc/1
+</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Verify if document exist</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">HEAD
+&lt;index&gt;/_doc/1  {”&lt;attribute&gt;”:&lt;value&gt;, ...}</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+# Command inside Dev Tools in Kibana</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>PUT:
+</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">PUT
+&lt;index&gt;/_doc/&lt;_id&gt; {”&lt;attribute&gt;”:&lt;value&gt;,
+...}</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Reindex document (generate a new version)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">PUT
+&lt;index&gt;/_create/&lt;_id&gt; {”&lt;attribute&gt;”:&lt;value&gt;,
+...}</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Creates a new document if it does not exist, if does exist throws an
+error</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>POST:
+</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">POST
+&lt;index&gt;/_update/&lt;_id&gt; {”&lt;attribute&gt;”:&lt;value&gt;,
+…} </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Update an existing document</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">POST
+&lt;index&gt;/_update/&lt;_id&gt; {“doc”:{”&lt;attribute&gt;”:&lt;value&gt;,
+…}} </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Create a new document and generates an id</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>DELETE:
+</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">DELETE
+&lt;index&gt;/_doc/&lt;_id&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Delete a document</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">DELETE
+&lt;index&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Delete an index</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>GET:
+</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">GET
+&lt;index&gt;/_search </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Search a index</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">GET
+&lt;index&gt;/_doc/&lt;_id&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Search a index by id, includes attributes inserted by elastic such as
+_version</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">GET
+&lt;index&gt;/_source/&lt;_id&gt; </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Search a index by id</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">GET
+&lt;index&gt;/_count </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+Count number of documents in indexes</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<br/>
+<br/>
+
+</p>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-23T18:47:13.083762603"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { color: #000000; line-height: 115%; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr; background: transparent }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+		a:link { color: #000080; so-language: zxx; text-decoration: underline }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>MongoDB
+</b></span></font></font><font color="#000000"><font size="4" style="font-size: 14pt"><span lang="en-US"><b>cheatsheet</b></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+database:</b></span></font></font><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>
+</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">use
+&lt;db name&gt;</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+current database: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+all databases: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show
+dbs</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show
+databases</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+collection: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.createCollection(‘&lt;name&gt;’)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+all collections: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">show
+collections</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Delete
+a collection: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;name&gt;.drop()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Drop
+database: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.dropDatabase()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Rename
+a collection: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;name&gt;.renameCollection(‘&lt;new
+name&gt;’)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Insert
+a document: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.insertOne(&lt;BSON document&gt;) </span></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Insert
+more than one document: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.insertMany([&lt;BSON document1&gt;, &lt;BSON document2&gt;,
+…])</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Examples:</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.cliente.insertOne{nome:
+“Lucas”, idade: 20, conhecimento: “Windows, Linux”}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.cliente.insertOne{nome:
+“Lucas”, idade: 20, conhecimento: [“Windows”, “Linux”]}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.cliente.insertOne{nome:
+“Lucas”, idade: 20, conhecimento: [“Windows”, “Linux”],
+endereco: {rua: “Eusebio Matoso”, numero: 1375, bairro:
+“Pinheiro”}}</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>List
+documents in a collection: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.find().pretty()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Query
+document: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.find({&lt;attribute&gt;:&lt;value&gt;})</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.find({“&lt;attribute&gt;.&lt;embed attribute&gt;”:&lt;value&gt;})
+</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#
+</span></span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.find({&lt;attribute&gt;:{&lt;operator&gt;:&lt;value&gt;}})
+</span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Common
+operators: </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$eq</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(equal to), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$ne</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(different than), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$gt</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(greater than), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$gte</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">(greater
+than or equal), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$lt</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(less than), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$lte</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(less than or equal), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$in</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(in list), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$nin</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(outside list), </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>$not</b></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">
+(not)</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">db.&lt;collection
+name&gt;.find({&lt;attribute&gt;:&lt;value&gt;},
+{&lt;attribute&gt;:&lt;projection value&gt;}) </span></span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">#Incorporate
+projection on query. Projection value: 0 to not show attribute, 1 to
+show attribute.</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>See
+replica set configuration: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rs.conf()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>See
+replica set status: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">rs.status()</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<br/>
+<br/>
+
+</p>
+</body>
+</html>

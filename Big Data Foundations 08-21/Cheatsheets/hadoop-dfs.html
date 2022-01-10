@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.2.2.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="2021-11-23T18:45:57.071090700"/>
+	<meta name="AppVersion" content="15.0000"/>
+	<style type="text/css">
+		@page { size: 8.5in 11in; margin: 0.79in }
+		p { color: #000000; line-height: 115%; text-align: left; orphans: 0; widows: 0; margin-bottom: 0.1in; direction: ltr; background: transparent }
+		p.western { font-family: "Liberation Serif", serif; font-size: 12pt; so-language: en-US }
+		p.cjk { font-family: "Noto Serif CJK SC"; font-size: 12pt; so-language: zh-CN }
+		p.ctl { font-family: "Noto Sans Devanagari"; font-size: 12pt; so-language: hi-IN }
+	</style>
+</head>
+<body lang="en-US" text="#000000" link="#000080" vlink="#800000" dir="ltr"><p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font size="4" style="font-size: 14pt"><b>HDFS
+</b></font><font size="4" style="font-size: 14pt"><b>Distributed File
+</b></font><font size="4" style="font-size: 14pt"><b>System
+</b></font><font size="4" style="font-size: 14pt"><b>cheatsheet</b></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<br/>
+<br/>
+
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Base
+command:</b></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs -&lt;command&gt;</span></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-bottom: 0in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Create
+directory:</b></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+ hdfs dfs -mkdir &lt;directory&gt;</span></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -mkdir -p &lt;directory&gt;/&lt;directory&gt;/&lt;directory&gt; </span></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#
+create folder structure</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>List
+directory: </b></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs ls &lt;directory name&gt;</span></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs ls -R &lt;directory name&gt;</span></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Remove
+directory:</b></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs rm &lt;</span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs rm -r &lt;</span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Delete
+directory</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs rm -skipTrash &lt;</span></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Delete
+permanently</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Copy/paste
+file or folder from local machine: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -put &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -put -f &lt;src&gt; &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Replace
+destiny if exists</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -put -l &lt;replication value&gt; &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Force
+replication factor</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -copyFromLocal &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Move
+file or folder from local:</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs -put &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#
+(and remove file/folder from source)</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -moveFromLocal &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Receive
+file or folder from hdfs: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">get
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">getmerge
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">source</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Creates
+a merged file from many sources</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Move
+file or folder to local: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -get &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;d</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">estination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#
+(and remove file/folder from source)</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -moveToLocal &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Move
+and copy files inside hdfs: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -cp &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;d</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">estination</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">Copy
+files</span></span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -cp -f &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Replace
+destiny if exists</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -mv &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font></font>
+</p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.12in; margin-bottom: 0.12in">
+<font face="Cantarell"><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -mv &lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource
+</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">1&gt;
+&lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource
+2</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+&lt;s</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">ource
+3</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+... &lt;</span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span lang="en-US"><span style="font-weight: normal">destination</span></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">&gt;
+</span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#Move
+from several sources</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#000000"><font size="4" style="font-size: 14pt"><b>Information:</b></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Show
+disk usage: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -du -h &lt;directory&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Show
+available disk space:</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs -df -h &lt;directory&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Show
+directory stats: </b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">hdfs
+dfs -stat %&lt;argument&gt; &lt;directory&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Count
+directory elements:</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+ hdfs dfs -count -h &lt;directory&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><b>Empty
+recycle bin:</b></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+ hdfs dfs -expunge</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>See
+file contents:</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+cat &lt;file&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Change
+replication factor: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">setrep
+&lt;factor&gt; &lt;file&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Create
+file with 0KB of data:</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+touchz &lt;directory&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Check
+file integrity:</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+checksum &lt;file&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+last 1KB of contents: </b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">tail
+&lt;file&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Show
+first n lines of contents (Hadoop 2):</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs -cat &lt;file&gt; | head -n &lt;number&gt;</span></font></font></font></p>
+<p class="western" align="left" style="line-height: 100%; margin-top: 0.04in; margin-bottom: 0.04in">
+<font face="Cantarell"><font color="#3465a4"><font size="3" style="font-size: 12pt"><span lang="en-US"><b>Find
+folder/file by expression:</b></span></font></font><font color="#000000"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">
+hdfs dfs -find &lt;path&gt; &lt;expression&gt; -print # example: hdfs
+dfs -find /folder -name \*.txt -print </span></font></font><font color="#127622"><font size="3" style="font-size: 12pt"><span style="font-weight: normal">#
+print command is optional</span></font></font></font></p>
+</body>
+</html>
